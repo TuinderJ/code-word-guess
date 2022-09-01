@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Guess</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script defer src="./assets/scripts/script.js"></script>
+</head>
+<body>
+  <header class="flex">
+    <h1>Word Guess</h1>
+    <button onclick="play()">Play</button>
+  </header>
+  <main class="flex">
+    <div class="word flex" id="word">Press Play!</div>
+    <div class="container flex">
+      <div class="win-loss-reset flex">
+        <div>
+          <div id="wins">Wins: </div>
+          <div id="losses">Losses: </div>
+        </div>
+        <button onclick="resetScores()">Reset Scores</button>
+      </div>
+      <div class="time flex">
+        <div id="time-remaining">0</div>
+        <div>Seconds Remaining</div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

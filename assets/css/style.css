@@ -1,0 +1,80 @@
+:root {
+  --accent-color: violet;
+  --button-color: #f669;
+  --button-hover-color: #f66f;
+}
+
+.flex {display: flex;}
+
+body {background-color: #3D3D3D;}
+
+header {
+  justify-content: space-between;
+  padding: 2.5rem;
+  background-color: var(--accent-color);
+  margin-bottom: 5rem;
+}
+
+h1 {
+  font-size: 250%;
+  font-weight: 900;
+}
+
+header button {
+  font-size: 150%;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 0 3rem;
+  border:  1px solid black;
+  background-color: var(--button-color);
+}
+
+header button:hover {background-color: var(--button-hover-color);}
+
+main {justify-content: space-around;}
+
+.word, .container {
+  background-color: var(--accent-color);
+  box-shadow: 0 0 15px 0 var(--accent-color);
+  border-radius: 10px;
+  width: 250px;
+  height: 175px;
+  padding: 1.5rem;
+}
+
+.word {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.word div {font-size: 150%;}
+
+.container {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.win-loss-reset {justify-content: space-between;}
+
+.win-loss-reset button {
+  background-color: var(--button-color);
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 0 1.5rem;
+  border:  1px solid black;
+}
+
+.win-loss-reset button:hover {background-color: var(--button-hover-color);}
+
+.win-loss-reset div div::after {content: attr(data-counter);}
+
+.time {
+  gap: .25rem;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#time-remaining {font-size: 300%;}
