@@ -9,7 +9,8 @@
 body {background-color: #3D3D3D;}
 
 header {
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   padding: 2.5rem;
   background-color: var(--accent-color);
   margin-bottom: 5rem;
@@ -18,20 +19,26 @@ header {
 h1 {
   font-size: 250%;
   font-weight: 900;
+  text-align: center;
 }
 
 header button {
   font-size: 150%;
+  width: max-content;
   border-radius: 15px;
   cursor: pointer;
   padding: 0 3rem;
+  margin-top: 1.5rem;
   border:  1px solid black;
   background-color: var(--button-color);
 }
 
 header button:hover {background-color: var(--button-hover-color);}
 
-main {justify-content: space-around;}
+main {
+  justify-content: space-around;
+  gap: 1rem;
+}
 
 .word, .container {
   background-color: var(--accent-color);
@@ -78,3 +85,11 @@ main {justify-content: space-around;}
 }
 
 #time-remaining {font-size: 300%;}
+
+@media screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  header {margin-bottom: 2rem;}
+}
