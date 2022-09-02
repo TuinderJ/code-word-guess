@@ -65,8 +65,8 @@ function play() {
   word.innerHTML = '';
   const letter = document.createElement('div');
   correctWord = words[Math.floor(Math.random() * words.length)];
-  for (let i = 0; i < correctWord.length; i++) {word.append(letter.cloneNode());}
-  for (let i = 0; i < word.children.length; i++) {word.children[i].textContent = '_';}
+  letter.textContent = '_';
+  for (let i = 0; i < correctWord.length; i++) {word.append(letter.cloneNode(true));}
   countdown();
 }
 
